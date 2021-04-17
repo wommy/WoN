@@ -12,8 +12,9 @@ menu:
     'mini angus burger': 12
     'wings':
       sauces: ['asian', 'buffalo', 'bbq', 'hot']
-      '6': 12
-      '9': 16
+      quantity: 
+        '6': 12
+        '9': 16
     'cheddar cubes': 8
     'cajun curds': 8
     'cheese fries': 6

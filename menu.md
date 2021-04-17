@@ -4,6 +4,9 @@ address: '2509 W North Ave'
 phone: '773 278 7710'
 title:
   'west friends are the best friends'
+footer:
+  - 'consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase the risk of foodborne illness'
+  - 'specials subject to change without notice'
 menu:
 - 'Starters':
     'hardshell taco plate': 9
@@ -69,7 +72,4 @@ specials:
     sliders: 1.5
   sunday: 
     wings: '1/2 price'
-footer:
-  - 'consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase the risk of foodborne illness'
-  - 'specials subject to change without notice'
 ---

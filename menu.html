@@ -1,0 +1,137 @@
+---
+layout: _Page
+siteName: West on North
+title: Menu
+header: 'West on North'
+address: '2509 W North Ave'
+phone: '773 278 7710'
+tagline:
+  'west friends are the best friends'
+footer:
+  - 'consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase the risk of foodborne illness'
+  - 'specials subject to change without notice'
+menu:
+  Starters:
+    'hardshell taco plate': 9
+    'cheesy beef tots': 12
+    'dynamite tots': 13
+    'mini angus burger': 12
+    'wings, 6': 9
+    'wings, 12': 16
+      # sauces: ['asian', 'buffalo', 'bbq', 'hot']
+    'cheddar cubes': 8
+    'cajun curds': 8
+    'cheese fries': 6
+    'chicken fingers': 8
+    'deep fried pickles': 8
+    'quesadilla': 7.5
+    'w/ chicken': 12
+    'basket of fries/tots': 5
+    'basket of chips': 4
+  Sandwiches:
+    'all sandwiches served with home chips or salad. substitute fries or tots for': 2
+    'classic burger': 11
+    'black bean burger': 9
+    'chicken breast': 11
+    'patty melt': 12
+    'italian beef': 9.5
+    'pulled pork': 11
+    'cod': 10
+  Salads / Wraps:
+    dressings: ['balsamic', 'asian vinaigrette', 'red wine vinaigrette', 'bleu cheese', '1000 isl', 'creamy garlic', 'ranch']
+    'buffalo chicken': 13
+    'chicken caeser': 13
+    'caeser': 9
+    'house': 9
+    'side': 6
+  pizza:
+    'buffalo chicken': 13
+    'bbq chicken': 13
+    'bacon and bleu cheese': 10
+    'pepperoni': 9.5
+    'sausage': 9.5
+    'cheese': 8
+add_ons: 
+  '0.5': ['cheddar', 'american', 'swiss', 'feta', 'jalapeno jack', 'mozzarella', 'crumbled bleu', 'parmesan', 'goat cheese', 'carmalized onions', 'grilled mushrooms', 'jalapenos', 'olives', 'sour cream', 'buffalo sauce', 'bourbon bbq sauce', 'asian wing sauce', 'hot wing sauce', 'tzatziki sauce', 'sauerkraut', 'cajun seasoning']
+  '1': ['applewood smoked bacon', 'avocado', 'fried egg']
+  '3': ['chicken', 'ground beef', 'italian beef']
+specials:
+  subtitle: 'happy hour (mon-fri 4-6pm)-$2 miller drafts & $.50 tacos (min 4)'
+  list: 
+    monday: 
+      italian beef: 7
+    tuesday: 
+      menu pizza: 7
+    wednesday: 
+      burgers: 7
+    thursday: 
+      1/2 slab: 10
+    friday: 
+      fish & chips: 7
+    saturday: 
+      sliders: 1.5
+    sunday: 
+      wings: '1/2 price'
+---
+<header class="text-center">
+  <h1 class="mb-0">{{ header }}</h1>
+  <div>
+    <a href="https://goo.gl/maps/g3LSUGRX79BuiUa3A" target="_blank">{{ address }}</a>
+  </div>
+  <a href="tel:{{phone}}">{{ phone }}</a>
+</header>
+<div>
+  {%- for menuCategory, menuList in menu %}
+  <div class="mt-4">
+    <h2 class="mb-0 ml-8">{{ menuCategory }}</h2>
+    {%- for menuItem, price in menuList %}
+    <div class="flex gap-x-4">
+      <span class="ml-auto">{{ menuItem }}</span>
+      <span>$</span>
+      <span class="w-10">{{ price }}</span>
+    </div>
+    {%- endfor %}
+  </div>
+  {%- endfor %}
+</div>
+<div class="mt-4">
+  <header>Add ons</header>
+  {%- for key, val in add_ons %}
+  <div>
+    <header>${{ key }}</header>
+    <ul>
+      {%- for ea in val %}
+      <li>{{ ea }}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+  {%- endfor %}
+</div>
+<div>
+  <h1>{{ tagline }}</h1>
+</div>
+<div>
+  <header>Specials</header>
+  <div>
+    {{ specials.subtitle }}
+  </div>
+  <div class="">
+    {%- for key, val in specials.list %}
+    <div class="">
+      <div>
+        {{key}}
+      </div>
+      <div>
+        {%- for food, price in val %}
+        ${{price}} {{food}}
+        {%- endfor %}
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+</div>
+<footer class="mt-4 text-sm">
+  {%- for ea in footer %}
+  <p>{{ea}}</p>
+  {%- endfor %}
+</footer>

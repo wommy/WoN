@@ -1,0 +1,17 @@
+---js
+{
+	layout: "_Html5",
+	title: "test",
+}
+---
+<main class="capitalize text-center">
+	<h1 class="my-1 underline">specials</h1>
+	<div class="flex flex-col">
+		{%- for ea in specials %}
+		<div class="my-1">
+			<div class="underline font-semibold">{{ ea.day }}</div>
+			<div>{{ ea.special }}</div>
+		</div>
+		{%- endfor %}
+	</div>
+</main>

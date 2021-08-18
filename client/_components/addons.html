@@ -1,48 +1,40 @@
----js
-{
-	layout: "_Html5",
-	title: "test",
-}
----
-<main>
-	<div>
-		<h1 class="my-1 text-center underline">Add Ons</h1>
-		<div class="mx-4 capitalize">
-			<div class="">
-				<div class="flex justify-between">
-					<header class="">$3:</header>
-					<span class="w-4/5">{{addons.three}}</span>
+<div>
+	<h1 class="my-1 text-center underline">Add Ons</h1>
+	<div class="mx-4 capitalize">
+		<div class="">
+			<div class="flex justify-between">
+				<header class="">$3:</header>
+				<span class="w-4/5">{{ addons.three }}</span>
+			</div>
+			<div class="mt-4 flex justify-between">
+				<header class="">$1:</header>
+				<div class="w-4/5 flex flex-wrap">
+					<span>{{ addons.one}}</span>
 				</div>
-				<div class="mt-4 flex justify-between">
-					<header class="">$1:</header>
-					<div class="w-4/5 flex flex-wrap">
-						<span>{{addons.one}}</span>
+			</div>
+			<div class="mt-4">
+				<h3 class="my-1 text-center font-medium underline">$0.50</h3>
+				<div class="flex justify-evenly">
+					<div class="flex flex-col">
+						<header class="underline text-center">Cheese</header>
+						{%- for ea in addons.fifty.cheese %}
+						<span class="text-sm tracking-tight">{{ea}}</span>
+						{%- endfor %}
 					</div>
-				</div>
-				<div class="mt-4">
-					<h3 class="my-1 text-center font-medium underline">$0.50</h3>
-					<div class="flex justify-evenly">
-						<div class="flex flex-col">
-							<header class="underline">Cheese</header>
-							{%- for ea in addons.fifty.cheese %}
-							<span class="text-sm tracking-tight">{{ea}}</span>
-							{%- endfor %}
-						</div>
-						<div class="flex flex-col">
-							<header class="underline">Veges</header>
-							{%- for ea in addons.fifty.vege %}
-							<span class="text-sm tracking-tight">{{ea}}</span>
-							{%- endfor %}
-						</div>
-						<div class="flex flex-col">
-							<header class="underline">Sauces</header>
-							{%- for ea in addons.fifty.sauce %}
-							<span class="text-sm tracking-tight">{{ea}}</span>
-							{%- endfor %}
-						</div>
+					<div class="flex flex-col">
+						<header class="underline text-center">Vege</header>
+						{%- for ea in addons.fifty.vege %}
+						<span class="text-sm tracking-tight">{{ea}}</span>
+						{%- endfor %}
+					</div>
+					<div class="flex flex-col">
+						<header class="underline text-center">Sauce</header>
+						{%- for ea in addons.fifty.sauce %}
+						<span class="text-sm tracking-tight">{{ea}}</span>
+						{%- endfor %}
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</main>
+</div>

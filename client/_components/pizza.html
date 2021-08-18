@@ -1,18 +1,10 @@
----js
-{
-	layout: "_Html5",
-	title: "test",
-}
----
-<main>
-	<div>
-		<h1 class="my-1 text-center underline">Pizza</h1>
-		<div class="text-sm tracking-tight capitalize">
-			<div class="mx-8 flex flex-col flex-wrap h-16 content-between">
-			{%- for ea in pizza %}
-    	{%- menuItem ea %}
-			{%- endfor %}
-			</div>
+<div>
+	<h1 class="my-1 text-center underline">Pizza</h1>
+	<div class="text-sm tracking-tight capitalize">
+		<div class="mx-8 flex flex-col flex-wrap h-16 content-between">
+		{%- for ea in pizza %}
+		{%- menuItem ea %}
+		{%- endfor %}
 		</div>
 	</div>
-</main>
+</div>

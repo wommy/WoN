@@ -1,22 +1,14 @@
----js
-{
-	layout: "_Html5",
-	title: "test",
-}
----
-<main>
-	<div>
-		<h1 class="my-1 text-center underline">Salads / Wraps</h1>
-		<div class="text-sm tracking-tight capitalize">
-			<div class="mx-8 flex flex-wrap flex-col h-10 content-between">
-			{%- for ea in saladwrap.items %}
-    	{%- menuItem ea %}
-			{%- endfor %}
-			</div>
-			<div class="my-1 mx-8 text-center">
-				<p class="my-1 text-base font-medium underline">dressings</p>
-				<span>{{ saladwrap.subtitle }}</span>
-			</div>
+<div>
+	<h1 class="my-1 text-center underline">Salads / Wraps</h1>
+	<div class="text-sm tracking-tight capitalize">
+		<div class="mx-8 flex flex-wrap flex-col h-10 content-between">
+		{%- for ea in saladwrap.items %}
+		{%- menuItem ea %}
+		{%- endfor %}
+		</div>
+		<div class="my-1 mx-8 text-center">
+			<p class="my-1 text-base font-medium underline">dressings</p>
+			<span>{{ saladwrap.subtitle }}</span>
 		</div>
 	</div>
-</main>
+</div>

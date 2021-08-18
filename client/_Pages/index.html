@@ -1,0 +1,28 @@
+---
+layout: _Html5
+---
+<main class="m-2">
+  <div class="text-center">
+    <h1 class="my-1">{{ meta.business }}</h1>
+    <div>
+      <a href="{{ meta.gmaps }}" target="blank">{{ meta.address }}</a>
+    </div>
+    <div>
+      <a href="tel:{{ meta.phone }}">{{ meta.phone }}</a>
+    </div>
+  </div>
+  {%- include "client/starters.html" %}
+  {%- include "client/sandwiches.html" %}
+  {%- include "client/saladswraps.html" %}
+  {%- include "client/pizza.html" %}
+  {%- include "client/addons.html" %}
+  <h1 class="text-center uppercase">{{ meta.tagline }}</h1>
+  {%- include "client/specials.html" %}
+  <footer class="mt-4 w-3/4 mx-auto text-center text-xs tracking-tight">
+    {%- for ea in meta.footer %}
+    <div>
+      <span>{{ea}}</span>
+    </div>
+    {%- endfor %}
+  </footer>
+</main>

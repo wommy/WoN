@@ -1,19 +1,15 @@
----js
-{
-	layout: "_Html5",
-	title: "test",
-}
----
-<main>
-	<div>
-		<h1 class="my-1 text-center underline font-">Sandwiches</h1>
-		<div class="text-sm">
-			<div class="mx-10 flex flex-wrap flex-col h-20 gap-x-4 capitalize">
-			{%- for ea in sandwiches.items %}
-    	{%- menuItem ea %}
-			{%- endfor %}
-			</div>
-			<p class="my-1 text-center">{{ sandwiches.subtitle }}</p>
+<div class="capitalize">
+	<h1 class="my-1 text-center underline font-">Sandwiches</h1>
+	<p class="my-0 text-center normal-case text-sm">
+		All sandwiches served with home chips or salad.
+		<br>
+		Substitute fries or tots for $2
+	</p>
+	<div class="mt-2">
+		<div class="mx-10 h-24 gap-x-4 flex flex-col flex-wrap">
+		{%- for ea in sandwiches.items %}
+		{%- menuItem ea %}
+		{%- endfor %}
 		</div>
 	</div>
-</main>
+</div>

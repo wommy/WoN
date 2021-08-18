@@ -1,6 +1,6 @@
 module.exports = ({ name, price }) => `
-<div class="gap-2.5 flex justify-end tracking-tight">
+<div class="flex justify-end tracking-tight">
 	<span>${ name }</span>
-	<span class="w-8">$ ${ price }</span>
+	<span class="ml-2.5 w-10">$ ${ price }</span>
 </div>
 `

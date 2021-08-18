@@ -1,4 +1,8 @@
 module.exports = {
+	suptitle: [
+		'All sandwiches served with home chips or salad.',
+		'Substitute fries or tots for $2',
+	],
 	items: [
 		{
 			name: 'classic burger',
@@ -23,5 +27,4 @@ module.exports = {
 			price: 10,
 		}
 	],
-	subtitle: 'All sandwiches served with home chips or salad. Substitute fries or tots for $2'
 }

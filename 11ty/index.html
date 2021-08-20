@@ -1,0 +1,68 @@
+---
+layout: html5
+---
+<div class="m-2">
+<header class="gap-4 items-center | italic | flex">
+	<h1>
+		<a href="//westonnorth.com">{{ settings.name }}</a>
+	</h1>
+	<a href="{{ settings.googleMaps }}" target="blank">{{ settings.address }}</a>
+	<a href="tel:{{ settings.phone }}">{{ settings.phone }}</a>
+</header>
+
+<main class="uppercase">
+<div class="flex">
+	{%- for ea in menu %}
+	<div class="flex-1">
+		<h2 class="underline">{{ ea.name }}</h2>
+		{%- for item in ea.items %}
+		<div>{{ item }}</div>
+		{%- endfor %}
+	</div>
+	{%- endfor %}
+</div>
+
+<h3 class="my-2">All sandwiches served with home chips or salad. Substitute fries or tots for $2</h3>
+
+<div>
+	{%- for cat in addons %}
+	<div>
+		<h3 class="inline-block">{{ cat.name }}</h3>
+		{%- for ea in cat.addons %}
+		<span>{{ ea }}{% if loop.last %}{%else%},{%endif%}</span>
+		{%- endfor %}
+	</div>
+	{%- endfor %}
+</div>
+
+<h2 class="my-4 | text-center">{{ settings.tagline }}</h2>
+
+<div>
+	<h2 class="inline-block underline">specials</h2>
+	<div class="inline-block ml-8">
+		<h3 class="inline-block">Happy Hour (Mon-Fri 4-6pm)</h3>
+		<span>$2 Miller Drafts &amp; $.50 Tacos (Min 4)</span>
+	</div>
+	<div class="flex">
+		{%- for ea in specials %}
+		<div class="flex-1 | text-center">
+			<h3 class="underline">{{ ea.name }}</h3>
+			<div>{{ ea.special }}</div>
+		</div>
+		{%- endfor %}
+	</div>
+</div>
+
+<div class="mt-4 | text-xs">
+	<div>{{ settings.disclaimerFood }}</div>
+	<div>{{ settings.disclaimerSpecials }}</div>
+</div>
+</main>
+
+<style>
+a:link, a:visited{
+	color: black;
+}
+</style>
+
+</div>

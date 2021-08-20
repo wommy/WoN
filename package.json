@@ -1,0 +1,12 @@
+{
+  "name": "west-menu",
+  "version": "2.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:wommy/west-menu.git",
+  "author": "wommy <tom@technomad.media>",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@sanity/client": "^2.15.0"
+  }
+}
